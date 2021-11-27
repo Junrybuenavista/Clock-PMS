@@ -29,5 +29,5 @@ $json = $response;
 
 $arr = json_decode($json, TRUE);
 
-print_r($arr['meals']);
+print_r($arr['guest_first_name']);
 
