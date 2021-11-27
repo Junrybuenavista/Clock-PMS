@@ -1,0 +1,14 @@
+Clock API credentials:
+User: htgrp
+API Secret: 84deb21061cef5be6e19c8876967a02b (digest auth)
+Base API: https://sky-us2.clock-software.com/base_api/90805/12612
+PMS API: https://sky-us2.clock-software.com/pms_api/90805/12612
+
+Clock User Interface Login -
+https://sky-us2.clock-software.com/subscriptions/sign_in/new_serial?serial=90805+3877+6642+1534+1714+9611
+Username (User): michaelvinocur@htgrp.net
+Password: NBVGood88go!
+
+Gmail in square spreadsheet
+automate@nbvresorts.com
+NBVGood88go!
