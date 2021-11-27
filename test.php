@@ -23,3 +23,11 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 echo $response;
+echo "<br><br><br>";
+
+$json = $response;
+
+$arr = json_decode($json, TRUE);
+
+print_r($arr['meals']);
+
