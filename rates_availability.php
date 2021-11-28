@@ -31,8 +31,27 @@
 		echo $response;
 		echo "<br><br><br>";
 
-$json = $response;
+		$json = $response;
 
-$arr = json_decode($json, TRUE);
+		$arr = json_decode($json, TRUE);
 
-print_r($arr);
+		//echo sizeof($arr[0]['rates']['364890']);
+		
+		
+		
+
+		$html = "<table>";
+		foreach($arr[0]['rates']['364890'] as $rates) {
+			$html .= "<tr>";
+				foreach ($rates as $drates) {
+					echo "<br>";
+					print_r($drates);
+					//$html .= "<td>7</td>";
+				}
+			$html .= "</tr>";
+		}
+		$html .= "</table>";
+		echo $html;
+
+		echo "<br><br><br>";
+		//print_r($arr);
