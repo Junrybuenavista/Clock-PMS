@@ -43,8 +43,10 @@
 		$html = "<table>";
 		foreach($arr[0]['rates']['364890'] as $rates) {
 			$html .= "<tr>";
+			echo "--------------------------------------------------------------";
 				foreach ($rates as $drates) {
 					echo "<br>";
+					echo "0000000000000000000000000000000000000000000000000000";
 					print_r($drates);
 					//$html .= "<td>7</td>";
 				}
