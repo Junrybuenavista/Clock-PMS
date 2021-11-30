@@ -9,9 +9,9 @@
 		//room id   474404 474403
 		curl_setopt_array($curl, array(
 			  //CURLOPT_URL => 'https://sky-us2.clock-software.com/pms_api/90805/12612/room_types/',
-			  //CURLOPT_URL => 'https://sky-us2.clock-software.com/pms_api/90805/12612/rooms/',
+			  CURLOPT_URL => 'https://sky-us2.clock-software.com/pms_api/90805/12612/rooms/',
 			  //CURLOPT_URL => 'https://sky-us2.clock-software.com/pms_api/90805/12612/rates/',
-			  CURLOPT_URL => 'https://sky-us2.clock-software.com/pms_api/90805/12612/rates_availability/?from=2021-11-01&to=2021-11-30&rates=364890&room_types=30191',
+			  //CURLOPT_URL => 'https://sky-us2.clock-software.com/pms_api/90805/12612/rates_availability/?from=2021-11-01&to=2021-11-30&rates=364890&room_types=30191&rooms=474403',
 			  //CURLOPT_URL => 'https://sky-us2.clock-software.com/pms_api/90805/12612/rates_availability?from=2021-11-01&to=2021-11-30&rates%5B%5D=364891&room_types%5B%5D=30191',
 			  CURLOPT_RETURNTRANSFER => true,
 			  CURLOPT_ENCODING => '',
@@ -35,7 +35,7 @@
 
 		$arr = json_decode($json, TRUE);
 
-		//echo sizeof($arr[0]['rates']['364890']);
+		echo sizeof($arr[0]['rates']['364890']);
 		
 		
 		
@@ -45,11 +45,15 @@
 			$html .= "<tr>";
 			echo "--------------------------------------------------------------";
 				foreach ($rates as $drates) {
-					echo "<br>";
-					echo "0000000000000000000000000000000000000000000000000000";
-					print_r($drates);
+					
+						if(!is_array($drates)){
+							//print_r($drates);
+							echo "<br>";
+							echo $drates;
+						}
 					//$html .= "<td>7</td>";
 				}
+				echo "<br>";
 			$html .= "</tr>";
 		}
 		$html .= "</table>";
